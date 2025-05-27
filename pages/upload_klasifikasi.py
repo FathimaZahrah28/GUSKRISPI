@@ -21,4 +21,4 @@ def show():
             # Simpan hasil
             df = pd.read_csv("data/data_jalan_rusak.csv")
             df = df.append({"latitude": lat, "longitude": lon, "hasil": hasil}, ignore_index=True)
-            df.to_csv("data/data_jalan_rusak.csv", index=False)
+            df.to_csv("/workspaces/GUSKRISPI/data/Kordinat+prediksi.csv", index=False)
