@@ -1,9 +1,10 @@
 from PIL import Image
 import numpy as np
-from tensorflow.keras.models import load_model
+import tensorflow as tf
+
 
 # Load model hanya sekali
-model = load_model("model\inception_resnet_model (1).keras")
+model = tf.keras.models.load_model("model/inception_resnet_model (1).keras")
 
 # Label klasifikasi sesuai urutan saat training
 label_map = {
@@ -22,4 +23,3 @@ def klasifikasikan_gambar(image: Image.Image) -> str:
     predictions = model.predict(img_array)
     label_index = np.argmax(predictions)
     return label_map[label_index]
-#.venv\Scripts\activate
