@@ -7,7 +7,7 @@ def show():
     st.title("🗺️ Peta Persebaran Jalan Rusak di Sidoarjo")
 
     # Baca data CSV
-    df = pd.read_csv("data/data_jalan_rusak.csv")
+    df = pd.read_csv("data//workspaces/GUSKRISPI/data/Kordinat+prediksi.csv")
 
     # Inisialisasi peta
     m = folium.Map(location=[-7.4498, 112.7015], zoom_start=14)
